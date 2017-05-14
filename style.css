@@ -1,9 +1,18 @@
 .c {
     text-align: center;
   }
+.GlySA {
+    width : 100px;
+    height: 100px;
+    fill:rgb(0, 0, 255);
+  }
+.board {
+  width: 1152px;
+  height: 720px;
+  background-color: rgb(165,35,35);
+}
   html { color: black; background-color: white; text-align: center; font-family: sans-serif; }
   body { width: 1250px; margin: 0 auto 0 auto; text-align: left; padding: 5px; }
-
   header { width: 1250px; display: table; }
   nav { width: 300px; float: left; display: table; }
-  article { width: 950px; display: table; } 
+  article { width: 950px; display: table; }
