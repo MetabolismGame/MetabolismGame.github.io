@@ -1,0 +1,25 @@
+.column{
+  column-count: 3;
+  column-gap: 10px;
+  column-width: 80px;
+}
+.c {
+    text-align: center;
+    column-span: all;
+  }
+.tab {
+  text-indent: 30px;
+}
+.secTab {
+  text-indent: -10px;
+  margin-left: 10px;
+}
+.secTab2 {
+  text-indent: -10px;
+  margin-left: 10px;
+  margin-top: -15px;
+}
+
+.lift {
+  margin-top: -5px;
+}
