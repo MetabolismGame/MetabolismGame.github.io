@@ -4,6 +4,11 @@
   column-width: 80px;
 
   }
+.column2{
+  column-count: 2;
+  column-gap: 20px;
+  column-width: 50px;
+  }
 .c {
     text-align: center;
     column-span: all;
@@ -23,3 +28,9 @@
 .nospace{
   margin-top: -10px;
   }
+table{
+  width: 100%
+}
+td{
+  padding-right: 8px;
+}
