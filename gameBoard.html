@@ -10,11 +10,15 @@
    <p><a href="index.html">Home</a></p>
    <p><a href="Rules.html">How To Play</a></p>
    <div class="board">
-       <svg>
+       <svg width="1152" height="720">
          <defs>
             <marker id='head' orient='auto' markerWidth='2' markerHeight='4'
               refX='0.1' refY='1'>
               <path d='M0,0 V2 L1,1 Z' fill='white' />
+            </marker>
+            <marker id='head1' orient='auto' markerWidth='2' markerHeight='4'
+              refX='2' refY='1'>
+              <path d='M0,0 V2 L1,1 Z' fill='white' transform="rotate(180 1 1)" />
             </marker>
           </defs>
          <!--Hexokinase  G1 //-->
@@ -25,23 +29,39 @@
             <path
               marker-end='url(#head)'
               stroke-width='18' fill='none' stroke='white'
-              d='M95,90  195,100'
+              d='M99,90  195,100'
             />
             <text x="116" y="84" transform="rotate(6)" fill='black'> Hexokinase </text>
             <!--input -->
             <path
               marker-end='url(#head)'
               stroke-width='10' fill='none' stroke='white'
-              d='M130,50 L130,60 C 132,80 135,80 145,70 L155,55'
+              d='M140,50 L140,60 C 142,80 145,80 155,70 L165,55'
             />
-            <circle cx="130" cy="35" r="15" fill='white'/>
-            <text x="120" y="40" font-size="10" fill='black'>ATP</text>
-            <text x="155" y="40" font-size="10" fill='white'>ADP</text>
+            <circle cx="140" cy="35" r="15" fill='white'/>
+            <text x="130" y="40" font-size="10" fill='black'>ATP</text>
+            <text x="165" y="40" font-size="10" fill='white'>ADP</text>
+
          <!-- Phosphoglucose Isomerase G2 -->
             <!--Carbon molecule -->
             <rect class="GlySA" x="210" y="60"/>
             <text x="215" y="100">Glucose-6-</text>
             <text x="215" y="120">Phosphate</text>
+         <!--  G3 -->
+            <!--Carbon molecule -->
+            <rect class="GlySA" x="410" y="60"/>
+            <text x="415" y="100">Glucose-6-</text>
+            <text x="415" y="120">Phosphate</text>
+         <!--  G4 -->
+            <!--Carbon molecule -->
+            <rect class="GlySA" x="610" y="60"/>
+            <text x="615" y="100">Glucose-6-</text>
+            <text x="615" y="120">Phosphate</text>
+         <!-- G5 -->
+            <!--Carbon molecule -->
+            <rect class="GlySA" x="810" y="60"/>
+            <text x="815" y="100">Glucose-6-</text>
+            <text x="815" y="120">Phosphate</text>
        </svg>
    </div>
 
