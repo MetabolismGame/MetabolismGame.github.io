@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="board.css">
 <head>
 <meta charset="utf-8">
+<script type="text/javascript"
+        src="boardScript.js"></script>
 <title > Metabolism </title>
 </head>
 <body>
@@ -33,14 +35,12 @@
             />
             <text x="116" y="84" transform="rotate(6)" fill='black'> Hexokinase </text>
             <!--input -->
-            <path
+            <path class="input" id="G1"
               marker-end='url(#head)'
-              stroke-width='10' fill='none' stroke='white'
-              d='M140,50 L140,60 C 142,80 145,80 155,70 L165,55'
             />
             <circle cx="140" cy="35" r="15" fill='white'/>
             <text x="130" y="40" font-size="10" fill='black'>ATP</text>
-            <text x="165" y="40" font-size="10" fill='white'>ADP</text>
+            <text x="165" y="45" font-size="10" fill='white'>ADP</text>
 
          <!-- Phosphoglucose Isomerase G2 -->
             <!--Carbon molecule -->
@@ -62,7 +62,18 @@
             <rect class="GlySA" x="810" y="60"/>
             <text x="815" y="100">Glucose-6-</text>
             <text x="815" y="120">Phosphate</text>
+
+
+            <path class="input" id="test"
+            marker-end='url(#head)'
+             />
+             <script>
+              inputString = "l0,5 c2,30 5,30 15,20 l11,-20"
+              G1pos = "140,50"
+              document.getElementById("G1").setAttribute("d", "M" + G1pos + inputString);
+             </script>
        </svg>
+
    </div>
 
 </body>
