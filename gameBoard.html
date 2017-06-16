@@ -2,11 +2,11 @@
 <html lang="en">
 <link rel="stylesheet" href="board.css">
 <head>
-<meta charset="utf-8">
-<script type="text/javascript"
-        src="boardScript.js"></script>
-<title > Metabolism </title>
+  <script type="text/javascript"src="boardScript.js"> </script>
+  <meta charset="utf-8">
+  <title > Metabolism </title>
 </head>
+
 <body>
   <h1 class="c"> LET'S PLAY! </h1>
    <p><a href="index.html">Home</a></p>
@@ -14,63 +14,62 @@
    <div class="board">
        <svg width="1152" height="720">
          <defs>
-            <marker id='head' orient='auto' markerWidth='2' markerHeight='4'
+            <marker id='forward' orient='auto' markerWidth='2' markerHeight='4'
               refX='0.1' refY='1'>
               <path d='M0,0 V2 L1,1 Z' fill='white' />
             </marker>
-            <marker id='head1' orient='auto' markerWidth='2' markerHeight='4'
+            <marker id='reverse' orient='auto' markerWidth='2' markerHeight='4'
               refX='2' refY='1'>
               <path d='M0,0 V2 L1,1 Z' fill='white' transform="rotate(180 1 1)" />
             </marker>
           </defs>
-         <!--Hexokinase  G1 //-->
-            <!--Carbon molecule -->
-            <rect x="10" y="40" width="90" height="90" style=fill:rgb(0,255,0); />
+       <!--Hexokinase  G1 //-->
+          <!--Carbon molecule -->
+            <rect x="10" y="40" class="Entry" />
             <text x="25" y="90" fill='black'> Glucose </text>
-            <!--enzyme arrow//-->
-            <path
-              marker-end='url(#head)'
-              stroke-width='18' fill='none' stroke='white'
-              d='M99,90  195,100'
-            />
+          <!--enzyme arrow//-->
+            <path class="reactionArrow"
+                marker-end='url(#forward)'
+                d='M99,90  195,100'/>
             <text x="116" y="84" transform="rotate(6)" fill='black'> Hexokinase </text>
-            <!--input -->
-            <path class="input" id="G1"
-              marker-end='url(#head)'
-            />
+          <!--ATP required -->
+            <path class="ATPinput" id="G1"
+              marker-end='url(#forward)'/>
             <circle cx="140" cy="35" r="15" fill='white'/>
             <text x="130" y="40" font-size="10" fill='black'>ATP</text>
             <text x="165" y="45" font-size="10" fill='white'>ADP</text>
 
-         <!-- Phosphoglucose Isomerase G2 -->
-            <!--Carbon molecule -->
-            <rect class="GlySA" x="210" y="60"/>
+        <!-- Phosphoglucose Isomerase G2 -->
+          <!--Carbon molecule -->
+            <rect class="Gly" x="210" y="60"/>
             <text x="215" y="100">Glucose-6-</text>
             <text x="215" y="120">Phosphate</text>
-         <!--  G3 -->
-            <!--Carbon molecule -->
-            <rect class="GlySA" x="410" y="60"/>
-            <text x="415" y="100">Glucose-6-</text>
-            <text x="415" y="120">Phosphate</text>
+          <!--enzyme arrow -->
+            <path class="reactionArrow"
+            marker-end='url(#forward)'
+            d="M300,105 l90,10" />
+            <text x="315" y="67" transform="rotate(7)" font-size="11" fill='black'> Phosphoglucose </text>
+            <text x="315" y="77" transform="rotate(7)" font-size="11" fill='black'> Isomerase </text>
+
+         <!-- Phosphoglucose Isomerase G3 -->
+            <!--Carbon molecule-->
+            <rect class="Gly" x="410" y="80"/>
+            <text x="415" y="120">Glucose-6-</text>
+            <text x="415" y="140">Phosphate</text>
+
          <!--  G4 -->
-            <!--Carbon molecule -->
-            <rect class="GlySA" x="610" y="60"/>
+            <!--Carbon molecule-->
+            <rect class="Gly" x="610" y="60"/>
             <text x="615" y="100">Glucose-6-</text>
             <text x="615" y="120">Phosphate</text>
          <!-- G5 -->
-            <!--Carbon molecule -->
-            <rect class="GlySA" x="810" y="60"/>
+            <!--Carbon molecule-->
+            <rect class="Gly" x="810" y="60"/>
             <text x="815" y="100">Glucose-6-</text>
             <text x="815" y="120">Phosphate</text>
 
-
-            <path class="input" id="test"
-            marker-end='url(#head)'
-             />
              <script>
-              inputString = "l0,5 c2,30 5,30 15,20 l11,-20"
-              G1pos = "140,50"
-              document.getElementById("G1").setAttribute("d", "M" + G1pos + inputString);
+              document.getElementById("G1").setAttribute("d", buildPositionString(140,50));
              </script>
        </svg>
 
