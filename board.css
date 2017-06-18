@@ -2,15 +2,21 @@
     text-align: center;
   }
 .Gly {
-    width : 90px;
-    height: 90px;
-    fill:rgb(30,144,255);
+    width : 23.8125px;
+    height: 23.8125px;
+    fill: #0000ff;
   }
 .Entry {
-    width : 90px;
-    height: 90px;
-    fill:rgb(0,255,0);
+    width : 23.8125px;
+    height: 23.8125px;
+    fill: #00d400;
   }
+.Krebs{
+    width: 23.8125px;
+    height: 23.8125px;
+    fill: #ffe800
+
+}
 .board {
   width: 1152px;
   height: 720px;
@@ -30,6 +36,3 @@
 }
   html { color: black; background-color: white; text-align: center; font-family: sans-serif; }
   body { width: 1250px; margin: 0 auto 0 auto; text-align: left; padding: 5px; }
-  header { width: 1250px; display: table; }
-  nav { width: 300px; float: left; display: table; }
-  article { width: 950px; display: table; }
